@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 나는 휴먼1
 작업 걸지마
 
 나는 휴먼2
 베이비 작업 걸지마2
+=======
+나bb는 휴먼bbb나는 휴먼2bbbbbbbb
+베이비 작업 걸지마2bbbbbbbbb
+알랄랄라라라라라라bbbbbbbb
+>>>>>>> 62dffe4e0b77d765ab4515560db618ceaf5fc778
