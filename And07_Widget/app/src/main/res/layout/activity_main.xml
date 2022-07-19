@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <Button
+        android:id="@+id/btn_txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="여기를 누르면 TextView에 글씨가 들어감"
+    />
+
+    <EditText
+        android:id="@+id/edt_text"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="여기의 글씨를 버튼을 누르면 위로 이동시킴"
+        />
+
+    <View
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#838383"/>
+
+    <EditText
+        android:id="@+id/edt_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="0이상의 숫자를 입력해주세요"/>
+
+    <Button
+        android:id="@+id/btn_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="확인"/>
+
+
+    <View
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#838383"/>
+
+
+    <RadioButton
+        android:id="@+id/rdo_man"
+        android:checked="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="남"/>
+    <RadioButton
+        android:id="@+id/rdo_woman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="여"/>
+
+
+    <RadioGroup
+        android:id="@+id/rdo_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아주나쁨"/>
+        <RadioButton
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나쁨"/>
+        <RadioButton
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="중간"/>
+        <RadioButton
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="좋음"/>
+        <RadioButton
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="아주좋음"/>
+    </RadioGroup>
+
+
+
+
+</LinearLayout>

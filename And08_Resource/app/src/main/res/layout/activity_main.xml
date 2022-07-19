@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            style="@style/carrot_tv_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나의 당근" />
+
+        <ImageView
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:src="@drawable/ic_baseline_settings_24"/>
+
+
+    </RelativeLayout>
+
+
+    <View
+        style="@style/carrot_line"
+        android:layout_height="2dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@mipmap/ic_kym"
+            app:civ_border_width="5dp"
+            app:civ_border_color="#A51F1F"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="닉네임"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="농성동 12312414124"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:text="\u003E"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:background="@drawable/carrot_dash_back"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_weight="3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pay"/>
+        <TextView
+            android:layout_weight="7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="중고거래는 이제 당근페이로 해보세요."/>
+   </LinearLayout>
+
+    <View
+        style="@style/carrot_line"
+        android:layout_height="3dp"/>
+    <TextView
+        style="@style/carrot_tv_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사장 메뉴" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@mipmap/ic_kym"/>
+        <TextView
+            style="@style/carrot_tv_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사장 메뉴" />
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

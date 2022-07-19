@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="notice_tv_width">100dp</dimen>
+    <dimen name="notice_tv_height">200dp</dimen>
+    <color name="notice_tv_color">#2D4B68</color>
+
+    <!-- style 미리 만들때 주의 해야할것은 디자인 단에서(layout.xml)에서 오류나는 코드는 똑같이 오류가난다.
+        혼동이있거나 햇갈리는경우는 레이아웃에가서 되는코드인지 먼저 검증을 하는게 좋음.
+    -->
+    <style name="notice_tv_style">
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">200dp</item>
+        <item name="android:textSize">30dp</item>
+        <item name="android:background">@color/notice_tv_color</item>
+    </style>
+    <!-- 재정의-->
+    <style name="notice_tv_style2" parent="notice_tv_style">
+        <item name="android:textSize">15dp</item>
+
+    </style>
+</resources>

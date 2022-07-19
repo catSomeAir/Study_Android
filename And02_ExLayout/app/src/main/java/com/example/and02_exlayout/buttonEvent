@@ -1,0 +1,86 @@
+package com.example.and02_exlayout;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = "KYM";
+    int i = 1;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main); // <= ( ※※ 디자인 <-> 자바 연결 ※※ )
+
+        //모든 위젯은 View클래스를 상속받음 ( View의 자식 클래스 )
+        //모든 위젯은 onClickListner라는 (눌렀을때) 이벤트를 가지고있다↑
+        //Button button = new Button(); <= 새로운 버튼을 메모리에 올림 ( x )
+        Button button = findViewById(R.id.button);//디자인에서 만들어놓은 버튼을 java 버튼 객체에 넣음(초기화)
+        TextView tv = findViewById(R.id.textView);
+
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //버튼이 눌러졌을때의 처리 ( logd <- 로그 찍기 단축키 )
+                // 버튼을 클릭할때마다 버튼이 눌러졌습니다 1
+                // 버튼을 클릭할때마다 버튼이 눌러졌습니다 2
+                // 버튼을 클릭할때마다 버튼이 눌러졌습니다 .
+                // 버튼을 클릭할때마다 버튼이 눌러졌습니다 누른횟수만큼 계속 증가...
+
+                Log.d(TAG, ": 버튼이 눌러졌습니다"+ (i++));
+                button.setText("버튼 눌린 횟수 : " + i); //setText( 여기에 들어있는 글자로 Text를 세팅함)
+                tv.setText(tv.getText()+"" + i);
+            }
+        });
+
+
+
+    }
+
+
+
+
+
+}
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="K Y M"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="30dp"
+        />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/ic_launcher_background" />
+
+    <!-- wrap_content : 해당하는 위젯이 기본적으로
+    가지고있는 크기
+        match_parent : 부모의 크기만큼 늘리기
+    -->
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="12dp"
+        android:text="클릭해보기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />

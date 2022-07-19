@@ -1,0 +1,23 @@
+Android Os에서 버튼을 눌렀을때 Interface를 통해서 돌려주는 처리
+
+     //버튼에 이벤트를 걸어보기 ( Interface )
+        testMethod(new testInterface() {
+            @Override
+            public void onClick(String abcd) {
+                 //어떤 버튼이 클릭되고 나서의 처리.
+                //익명의 메소드를 제공하는 이유는 다 똑같은 이벤트 처리가 일어나는게아니라
+                //각각의 버튼마다(위젯) 다른 이벤트를 주기 위한 형식
+            }
+        });
+    }
+
+
+ //안드로이드에서 해당하는 인터페이스를 제공함
+    interface testInterface{
+        void onClick(String abcd); // 이 인터페이스를 상속받으면 무조건 만들어야함 ( abstract )
+    }
+
+    //
+    public void testMethod(testInterface testInterface){
+        testInterface.onClick("해당하는 버튼이 눌림");
+    }

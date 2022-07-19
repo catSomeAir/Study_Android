@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+<!--match_parent = 부모크기만큼의 크기(늘림)-->
+<!--wrap_content = 위젯의 기본 크기 또는 위젯이 담고있는
+    내용의 크기에 따라서 바뀜(가변)
+    id : @+id/ 리소스 경로 그리고나서 값
+-->
+    <Button
+        android:textSize="40dp"
+        android:text="노말 평범한 버튼"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn"/>
+    <TextView
+        android:text="글씨ㅁㅁㅁㅁㅁㅁㅁㅁ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+    <Button
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:text=" 마진 버튼 "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn1"/>
+    <Button
+        android:padding="30dp"
+        android:text=" 패딩 버튼 "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn2"/>
+<!--
+    Gravity : 내부에 (중력) 정렬(내용)
+    right , left , top , bottom , center 내부에있는내용을
+    정렬시킴
+
+    Layout Gravity :
+-->
+    <Button
+        android:gravity="center"
+        android:text="그래비티"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/btn3"/>
+
+    <Button
+        android:layout_gravity="bottom"
+        android:text="레이아웃 그래비티"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:gravity="bottom"
+        android:layout_gravity="right"
+        android:text="레이아웃 그래비티"
+        android:layout_width="200dp"
+        android:layout_height="200dp"/>
+
+
+</LinearLayout>
